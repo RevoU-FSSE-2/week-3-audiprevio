@@ -1,0 +1,677 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Maven Pro', sans-serif;
+    background-color: #090909;
+} */
+
+@font-face {
+    font-family: 'Maven Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Maven Pro'), local('MavenPro-Regular'),
+        url('https://fonts.gstatic.com/s/mavenpro/v13/7Au9p_AqnyWWAxW2Wk3Gzjn7RYyW5EWw8w.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Maven Pro';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Maven Pro Medium'), local('MavenPro-Medium'),
+        url('https://fonts.gstatic.com/s/mavenpro/v13/7Au9p_AqnyWWAxW2Wk3Gzjn7RYyW5EWw8w.woff2') format('woff2');
+}
+
+.dmButton {
+    background-color: transparent;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+    /* Add your custom graphic properties here */
+}
+
+.dmButton:hover {
+    color: #dfdfdf;
+    /* Add your custom graphic properties for hover state here */
+}
+/* Repeat for the other weights (600, 700, 800, 900) */
+
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 0;
+    padding: 0;
+    font-family: 'Maven Pro', sans-serif;
+    background-color: #090909;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: #ffff;
+}
+.Navbar {   
+    display: flex;
+    justify-content: space-between;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: fixed;
+    top: 0;
+    width: 99%;
+    background-color: transparent;
+    z-index: 1000;
+    align-content: flex-start;
+    align-items: center;
+}
+li {
+    display: inline-flex;
+    padding-left: 32px;
+    color: white;
+}
+li:hover {
+    text-decoration: underline;
+    color: #dadada;
+    transition: ease-in 0.6s ease;
+}
+a:hover {
+    text-decoration: underline;
+    color: #dadada;
+    transition: ease-in-out 0.3s ease;
+}
+
+.Herocontainer {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.herocoverimage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.herocoverimage:hover {
+    transform: scale(1.5);
+    transition: ease-in 15s;
+}
+.hero-text {
+    position: absolute;
+    top: 39.06%;  
+    left: 50%; 
+    bottom: 44.04%; 
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    font-size: 48px;
+    transform: translateX(-50%); /* This is used to center the div correctly after removing the right property */
+}
+.productherocontainer {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    cover: no-repeat, 
+    color: #D9D9D9;
+}
+.productherocoverimage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.productherocoverimage:hover {
+    transform: scale(1.5);
+    transition: ease-in 15s;
+}
+.producthero-text {
+    position: absolute;
+    top: 73%;
+    left: 50%;
+    font-size: 4.4rem;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    transform: translateX(-50%); /* This is used to center the div correctly after removing the right property */
+}
+.producthero-text > h1 {
+    font-size: 52px;
+    font-weight: 500;
+    color: white;
+    white-space: no-wrap;
+}
+.producthero-text-CTA > p {
+    font-weight: 400;
+    font-size: 24px;
+    color: white;
+    text-shadow: 2px 2px 4px hwb(0 100% 0% / 0.056);
+    text-decoration: none;
+    white-space: nowrap;  /* Prevents the text from wrapping */
+}
+.producthero-text-CTA {
+    position: absolute;
+    top: 85%;  /* 838px / 1024px = 0.82 -> 82% */
+    left: 50%; /* 548px / 1440px = 0.38 -> 38% */
+    font-size: 1rem;  /* 64px / 1440px = 0.044 -> 4.4vw */
+    text-align: center;
+    transform: translateX(-50%); /* This is used to center the div correctly after removing the right property */
+}
+a {
+    text-decoration: none;
+}
+.hero-text > h1 {
+    font-size: 72px;
+    font-weight: 500;
+    color: white;
+}
+.headingtext {
+    margin: 0px;
+    padding: 0px;
+}
+.headingtext > h1 {
+    font-size: 52px;
+    font-weight: 500;
+    color: white;
+    padding: 0px;
+    margin: 12px;
+}
+.bodytext {
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+}
+.NavLogo {
+    color: white;
+    padding-left: 0.5rem;
+}
+.NavLogo > h3 {
+    font-weight: 500;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "container1 container2 container3"
+        "container1 container4 container3";
+    gap: 10px;
+}
+
+.grid-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.container-1 {
+    grid-area: container1;
+}
+
+.container-2 {
+    grid-area: container2;
+}
+
+.container-3 {
+    grid-area: container3;
+}
+
+.container-4 {
+    grid-area: container4;
+}
+
+.productherocoverimage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.customproductcontainerheading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 24vh;
+    position: relative;
+    overflow: hidden;
+    background-color: #090909;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.customproductcontainer {
+    width: 100%;
+    height: 70vh;
+    padding-top: 5%;
+    position: relative;
+    overflow: hidden;
+    background-color: #090909;
+}
+.centered-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; 
+}
+.hero-text > h1, .producthero-text > h1, .headingtext > h1 {
+    text-shadow: 2px 2px 4px hwb(0 100% 0% / 0.056);
+}
+
+/*<<!-Below this is CSS for Carousel-->*/
+html, body {
+    margin: 0px;
+    padding: 0px;
+    background: url("http://digital.bnint.com/filelib/s9/photos/white_wood_4500x3000_lo_res.jpg");
+}
+
+.carousel {
+    position: relative;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+    margin-top: 26px;
+}
+
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-open:checked + .carousel-item {
+    position: static;
+    opacity: 100;
+}
+
+.carousel-item {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+}
+
+.carousel-item img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.carousel-control {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+}
+
+.carousel-control.prev {
+    left: 2%;
+}
+
+.carousel-control.next {
+    right: 2%;
+}
+
+.carousel-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3 {
+    display: block;
+}
+
+.carousel-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.carousel-bullet {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+}
+
+.carousel-bullet:hover {
+    color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+    color: #767676;
+}
+
+#title {
+    width: 100%;
+    position: absolute;
+    padding: 0px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 27px;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Open Sans', sans-serif;
+    z-index: 9999;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+}
+@keyframes changeHue {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: hue-rotate(180deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+.productherocontainer:hover .productherocoverimage {
+    animation: changeHue 150s infinite;
+    animation-delay: 2s;
+}
+body {
+    background-color: #090909;
+}
+
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #090909;
+}
+
+.form-container {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.form-heading {
+    font-size: 42px;
+    font-weight: 500;
+    white-space: wrap;
+    margin: 0px;
+    word-wrap: wrap;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form label {
+    font-size: 18px;
+    font-weight: 400;
+    color: fff;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="date"] {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.submit-button {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: center;
+    margin-top: 1rem;
+}
+
+body.dark-mode {
+    background-color: #fafafa;
+    color: #fff;
+}
+
+body.dark-mode .Navbar {
+    background-color: #fafafa;
+    width: 100%;
+}
+
+body.dark-mode li {
+    color: #090909;;
+}
+
+body.dark-mode li:hover {
+    color: #777;
+}
+
+body.dark-mode a {
+    color: #090909;;
+}
+
+body.dark-mode a:hover {
+    color: #777;
+}
+
+body.dark-mode .customproductcontainerheading {
+    color: #fff;
+    background-color: #fafafa;
+}
+
+body.dark-mode .customproductcontainer {
+    color: #fff;
+    background-color: #fafafa;
+}
+
+body.dark-mode .content-container {
+    background-color: #fafafa;
+}
+
+body.dark-mode .hero-text,
+body.dark-mode .producthero-text,
+body.dark-mode .headingtext > h1,
+body.dark-mode .bodytext,
+body.dark-mode .NavLogo > h3 {
+    color: #090909;
+}
+
+body.dark-mode .carousel-control {
+    color: #090909;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+body.dark-mode .form-container {
+    background-color: #090909;
+    color: #ddd;
+}
+
+body.dark-mode .submit-button {
+    background-color: #777;
+    color: #fff;
+}
+
+body.dark-mode .dmButton {
+    color: #090909;
+}
+
+body.dark-mode .dmButton:hover {
+    color: #343434;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+    .hero-text, .producthero-text {
+        font-size: 32px;
+    }
+    .headingtext > h1 {
+        font-size: 40px;
+    }
+    .bodytext {
+        font-size: 16px;
+    }
+    .form-heading {
+        font-size: 32px;
+    }
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            "container1"
+            "container2"
+            "container3"
+            "container4";
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+.hero-text, .producthero-text {
+    font-size: 36px;
+}
+.headingtext > h1 {
+    font-size: 44px;
+}
+.bodytext {
+    font-size: 16px;
+}
+.form-heading {
+    font-size: 36px;
+}
+.grid-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "container1 container2"
+        "container3 container4";
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 600px) {
+/* Styles for small devices (e.g., smartphones) */
+
+.hero-text,
+.producthero-text,
+.headingtext > h1,
+.bodytext {
+    font-size: 24px;
+}
+
+.grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "container1"
+    "container2"
+    "container3"
+    "container4";
+}
+.dmButton {
+    background-color: transparent;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+    /* Add your custom graphic properties here */
+}
+
+.dmButton:hover {
+    background-color: #ffffff;
+    color: #000000;
+    /* Add your custom graphic properties for hover state here */
+}
+
+button > .dmButton {
+    background-color: transparent;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+    /* Add your custom graphic properties here */
+}
+
+.customproductcontainerheading {
+    height: 30vh;
+}
+
+.customproductcontainer {
+    height: 60vh;
+}
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+/* Styles for medium devices (e.g., tablets) */
+
+.hero-text,
+.producthero-text,
+.headingtext > h1,
+.bodytext {
+    font-size: 36px;
+}
+
+.grid-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "container1 container2"
+    "container3 container4";
+}
+
+.customproductcontainerheading {
+    height: 40vh;
+}
+
+.customproductcontainer {
+    height: 70vh;
+}
+}
+
+@media only screen and (min-width: 1025px) {
+/* Styles for large devices (e.g., laptops and desktops) */
+
+.hero-text,
+.producthero-text,
+.headingtext > h1,
+.bodytext {
+    font-size: 48px;
+}
+
+.grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "container1 container2 container3"
+    "container1 container4 container3";
+}
+
+.customproductcontainerheading {
+    height: 50vh;
+}
+
+.customproductcontainer {
+    height: 80vh;
+}
